@@ -47,5 +47,4 @@ public:
 		lc.add_animal(animal_factory(2));
 		Assert::AreEqual(4u, lc.legs());
 	}
-
 };
