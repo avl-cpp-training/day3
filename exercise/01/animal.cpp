@@ -3,6 +3,9 @@
 
 std::wstring leg_counter::add_animal(std::unique_ptr<animal>&& animal)
 {
+  if (!animal)
+    return std::wstring();
+
   animals.emplace_back(std::move(animal));
   return animals.back()->species();
 }
