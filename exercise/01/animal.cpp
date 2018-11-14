@@ -1,5 +1,6 @@
 #include  "animal.h"
 #include <algorithm>
+#include <numeric>
 
 animal::~animal() = default;
 
@@ -47,9 +48,7 @@ std::wstring leg_counter::add_animal(std::unique_ptr<animal> animal)
 
 unsigned leg_counter::legs() const
 {
-  int sum{};
-  std::for_each(animals_.cbegin(), animals_.cend(), [&sum](const std::unique_ptr<animal>& a) { sum += a->legs(); });
-  return sum;
+	return std::accumulate(animals_.cbegin(), animals_.cend(), 0, [](int acc, auto& animal) { return acc + animal->legs(); });
 }
 
 std::unique_ptr<animal> animal_factory(const int animal)
