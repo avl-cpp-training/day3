@@ -1,4 +1,4 @@
 ### exercise 01 - hijerarhija klasa
 
-Implementirajte sve potrebne klase da prođu svi testovi.
+Implementirajte interface 'animal' i sve potrebne klase da prođu svi testovi.
 
