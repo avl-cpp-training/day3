@@ -15,9 +15,15 @@
     <ClCompile Include="animal.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="leg_counter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="animal.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="leg_counter.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

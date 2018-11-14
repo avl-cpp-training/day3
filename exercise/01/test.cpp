@@ -1,4 +1,5 @@
 #include "CppUnitTest.h"
+#include "leg_counter.h"
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 #include "animal.h"
@@ -40,6 +41,7 @@ public:
 		Assert::AreEqual(L"tarantula", lc.add_animal(animal_factory(3)).c_str());
 		Assert::AreEqual(16u, lc.legs());
 	}
+
 	TEST_METHOD(legg_counter_same_animal)
 	{
 		leg_counter lc;
