@@ -37,7 +37,7 @@ struct legged_animal : animal
 template<std::size_t ANIMAL_ID, typename ANIMAL_TYPE>
 struct named_animal final : ANIMAL_TYPE
 {
-  std::wstring const & species() const noexcept override final
+  std::wstring const & species() const noexcept override
   {
     return animal_name<ANIMAL_ID>::name;
   }
