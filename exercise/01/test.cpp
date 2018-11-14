@@ -14,7 +14,8 @@ public:
 		Assert::AreEqual(L"cockroach", a.species().c_str());
 		Assert::AreEqual(6u, a.legs());
 	}
-	TEST_METHOD(concrete_bird)
+	
+  TEST_METHOD(concrete_bird)
 	{
 		sparrow s;
 		bird& b = s;
@@ -23,16 +24,16 @@ public:
 		Assert::AreEqual(2u, a.legs());
 	}
 
-	TEST_METHOD(concrete_spider)
+  TEST_METHOD(concrete_spider)
 	{
 		tarantula t;
-		spider& s = t;
+    spider& s = t;
 		animal& a = t;
 		Assert::AreEqual(L"tarantula", a.species().c_str());
 		Assert::AreEqual(8u, a.legs());
 	}
 
-	TEST_METHOD(legg_counter_different_animals)
+  TEST_METHOD(legg_counter_different_animals)
 	{
 		leg_counter lc;
 		Assert::AreEqual(L"cockroach", lc.add_animal(animal_factory(1)).c_str());
@@ -40,7 +41,8 @@ public:
 		Assert::AreEqual(L"tarantula", lc.add_animal(animal_factory(3)).c_str());
 		Assert::AreEqual(16u, lc.legs());
 	}
-	TEST_METHOD(legg_counter_same_animal)
+	
+  TEST_METHOD(legg_counter_same_animal)
 	{
 		leg_counter lc;
 		lc.add_animal(animal_factory(2));
