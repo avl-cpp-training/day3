@@ -5,7 +5,7 @@
 struct animal
 {
   virtual ~animal();
-  virtual std::wstring species() const noexcept = 0;
+  virtual std::wstring species() const = 0;
   virtual std::size_t legs() const noexcept = 0;
 };
 
@@ -16,7 +16,7 @@ struct insect : animal
 
 struct cockroach final : insect
 {
-  std::wstring species() const noexcept override;
+  std::wstring species() const override;
 };
 
 struct bird : animal
@@ -26,7 +26,7 @@ struct bird : animal
 
 struct sparrow final : bird
 {
-  std::wstring species() const noexcept override;
+  std::wstring species() const override;
 };
 
 struct spider : animal
@@ -36,7 +36,7 @@ struct spider : animal
 
 struct tarantula final : spider
 {
-  std::wstring species() const noexcept override;
+  std::wstring species() const override;
 };
 
 

@@ -8,9 +8,9 @@ std::size_t insect::legs() const noexcept
   return 6u;
 }
 
-std::wstring cockroach::species() const noexcept
+std::wstring cockroach::species() const
 {
-  return std::wstring(L"cockroach");
+  return L"cockroach";
 }
 
 std::size_t bird::legs() const noexcept
@@ -18,9 +18,9 @@ std::size_t bird::legs() const noexcept
   return 2u;
 }
 
-std::wstring sparrow::species() const noexcept
+std::wstring sparrow::species() const
 {
-  return std::wstring(L"sparrow");
+  return L"sparrow";
 }
 
 std::size_t spider::legs() const noexcept
@@ -28,9 +28,9 @@ std::size_t spider::legs() const noexcept
   return 8u;
 }
 
-std::wstring tarantula::species() const noexcept
+std::wstring tarantula::species() const
 {
-  return std::wstring(L"tarantula");
+  return L"tarantula";
 }
 
 std::unique_ptr<animal> animal_factory(const std::size_t animal_id)
