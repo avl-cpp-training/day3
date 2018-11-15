@@ -9,12 +9,26 @@ struct animal
   virtual ~animal() = default;
 };
 
-template<std::size_t LEGS>
+template<typename T, std::size_t ANIMAL_ID>
+static T fail_name()
+{
+  static_assert(false, "specialize value member");
+}
+
+using animal_family_id = std::size_t;
+template<animal_family_id ANIMAL_FAMILY_ID>
+struct leg_count
+{
+  static const std::size_t value;
+};
+template<animal_family_id ANIMAL_FAMILY_ID> const std::size_t leg_count<ANIMAL_FAMILY_ID>::value = fail_name<std::size_t, ANIMAL_ID>();
+
+template<animal_family_id ANIMAL_FAMILY_ID>
 struct legged_animal : animal
 {
   std::size_t legs() const noexcept override final
   {
-    return LEGS;
+    return leg_count<ANIMAL_FAMILY_ID>::value;
   }
 };
 
@@ -24,16 +38,10 @@ struct animal_name
 {
   static const std::wstring value;
 };
+template<animal_id ANIMAL_ID> const std::wstring animal_name<ANIMAL_ID>::value = fail_name<std::wstring, ANIMAL_ID>();
 
-template<animal_id ANIMAL_ID>
-static std::wstring fail_name()
-{
-  static_assert(false, "specialize name member");
-}
-template<animal_id ANIMAL_ID> const std::wstring animal_name<ANIMAL_ID>::value = fail_name<ANIMAL_ID>();
-
-template<std::size_t ANIMAL_ID, typename ANIMAL_TYPE>
-struct named_animal final : ANIMAL_TYPE
+template<animal_id ANIMAL_ID, animal_family_id ANIMAL_FAMILY_ID>
+struct named_animal final : legged_animal<ANIMAL_FAMILY_ID>
 {
   std::wstring const & species() const noexcept override
   {
