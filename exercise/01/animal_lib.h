@@ -21,7 +21,7 @@ struct leg_count
 {
   static const std::size_t value;
 };
-template<animal_family_id ANIMAL_FAMILY_ID> const std::size_t leg_count<ANIMAL_FAMILY_ID>::value = fail_name<std::size_t, ANIMAL_ID>();
+template<animal_family_id ANIMAL_FAMILY_ID> const std::size_t leg_count<ANIMAL_FAMILY_ID>::value = fail_name<std::size_t, ANIMAL_FAMILY_ID>();
 
 template<animal_family_id ANIMAL_FAMILY_ID>
 struct legged_animal : animal
