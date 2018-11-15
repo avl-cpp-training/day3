@@ -2,6 +2,7 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 #include "animal.h"
+#include "leg_counter.h"
 
 TEST_CLASS(test_animal_hierarchy)
 {
