@@ -1,35 +1,35 @@
 #include "animal.h"
 
-std::wstring cockroach::species()
+std::wstring cockroach::species() const
 {
 	return L"cockroach";
 }
 
-unsigned int cockroach::legs()
+unsigned int cockroach::legs() const
 {
 	return 6u;
 }
 
 cockroach::~cockroach(){ }
 
-std::wstring sparrow::species()
+std::wstring sparrow::species() const
 {
 	return L"sparrow";
 }
 
-unsigned int sparrow::legs()
+unsigned int sparrow::legs() const
 {
 	return 2u;
 }
 
 sparrow::~sparrow(){ }
 
-std::wstring tarantula::species()
+std::wstring tarantula::species() const
 {
 	return L"tarantula";
 }
 
-unsigned int tarantula::legs()
+unsigned int tarantula::legs() const
 {
 	return 8u;
 }
@@ -43,7 +43,7 @@ animal_factory::animal_factory(int id)
 	create_animal();
 }
 
-animal* animal_factory::create_animal()
+animal* animal_factory::create_animal() const
 {
 	switch (id)
 	{
@@ -67,7 +67,7 @@ std::wstring leg_counter::add_animal(animal_factory& af)
 	return species;
 }
 
-unsigned int leg_counter::legs()
+unsigned int leg_counter::legs() const
 {
 	return counter;
 }
