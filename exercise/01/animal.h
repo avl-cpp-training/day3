@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include <vector>
 
 class animal
 {
@@ -61,27 +60,10 @@ protected:
 class leg_counter
 {
 public:
-	std::wstring add_animal(animal*) const;
+	std::wstring add_animal(std::unique_ptr<animal>);
+	unsigned legs() const;
 private:
-	std::vector<animal> animals;
+	unsigned animalCount = 0;
 };
 
-enum Animals { Cockroach = 1, Sparrow = 2, Tarantula = 3 };
-
-inline animal* animal_factory(int num)
-{
-	if (num == Animals::Cockroach)
-	{
-		return new cockroach;
-	}
-	if (num == Animals::Sparrow)
-	{
-		return new sparrow;
-	}
-	if (num == Animals::Tarantula)
-	{
-		return new tarantula;
-	}
-
-	return nullptr;
-}
+std::unique_ptr<animal> animal_factory(int num);
