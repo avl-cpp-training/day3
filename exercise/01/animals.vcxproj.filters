@@ -7,6 +7,15 @@
     <Filter Include="test">
       <UniqueIdentifier>{3cc0fd48-6585-4969-94bd-406daa5f786b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\birds">
+      <UniqueIdentifier>{86b04c11-d90c-49df-b0c7-c75f1c188abc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\spiders">
+      <UniqueIdentifier>{4440da7f-201a-4e94-b132-3fbf2265aaf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\insects">
+      <UniqueIdentifier>{f21d6caf-1229-4633-85c6-66427a707c9d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -15,10 +24,55 @@
     <ClCompile Include="animal.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="leg_counter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="bird.cpp">
+      <Filter>src\birds</Filter>
+    </ClCompile>
+    <ClCompile Include="sparrow.cpp">
+      <Filter>src\birds</Filter>
+    </ClCompile>
+    <ClCompile Include="cockroach.cpp">
+      <Filter>src\insects</Filter>
+    </ClCompile>
+    <ClCompile Include="insect.cpp">
+      <Filter>src\insects</Filter>
+    </ClCompile>
+    <ClCompile Include="spider.cpp">
+      <Filter>src\spiders</Filter>
+    </ClCompile>
+    <ClCompile Include="tarantula.cpp">
+      <Filter>src\spiders</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="animal.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="leg_counter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="animal_factory.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="bird.h">
+      <Filter>src\birds</Filter>
+    </ClInclude>
+    <ClInclude Include="sparrow.h">
+      <Filter>src\birds</Filter>
+    </ClInclude>
+    <ClInclude Include="cockroach.h">
+      <Filter>src\insects</Filter>
+    </ClInclude>
+    <ClInclude Include="insect.h">
+      <Filter>src\insects</Filter>
+    </ClInclude>
+    <ClInclude Include="spider.h">
+      <Filter>src\spiders</Filter>
+    </ClInclude>
+    <ClInclude Include="tarantula.h">
+      <Filter>src\spiders</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

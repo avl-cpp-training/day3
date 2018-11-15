@@ -2,6 +2,11 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 #include "animal.h"
+#include "cockroach.h"
+#include "sparrow.h"
+#include "tarantula.h"
+#include "leg_counter.h"
+#include "animal_factory.h"
 
 TEST_CLASS(test_animal_hierarchy)
 {

@@ -84,9 +84,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="animal.h" />
+    <ClInclude Include="animal_factory.h" />
+    <ClInclude Include="bird.h" />
+    <ClInclude Include="cockroach.h" />
+    <ClInclude Include="insect.h" />
+    <ClInclude Include="leg_counter.h" />
+    <ClInclude Include="sparrow.h" />
+    <ClInclude Include="spider.h" />
+    <ClInclude Include="tarantula.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="animal.cpp" />
+    <ClCompile Include="bird.cpp" />
+    <ClCompile Include="cockroach.cpp" />
+    <ClCompile Include="insect.cpp" />
+    <ClCompile Include="leg_counter.cpp" />
+    <ClCompile Include="sparrow.cpp" />
+    <ClCompile Include="spider.cpp" />
+    <ClCompile Include="tarantula.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
