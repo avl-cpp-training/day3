@@ -1,11 +1,11 @@
 #include  "leg_counter.h"
 
-std::wstring leg_counter::add_animal(std::unique_ptr<animal> animal)
+std::wstring leg_counter::add_animal(const std::unique_ptr<animal>& animal_ptr)
 {
-  if (animal == nullptr)
+  if (animal_ptr == nullptr)
     return L"";
-  sum_ += animal->legs();
-  return animal->species();
+  sum_ += animal_ptr->legs();
+  return animal_ptr->species();
 }
 
 unsigned leg_counter::legs() const
