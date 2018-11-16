@@ -8,10 +8,6 @@ TEST_CLASS(test_animal_hierarchy)
 public:
 	TEST_METHOD(concrete_insect)
 	{
-    using some = legged_animal<15>;
-    using something_else = named_animal<11, 15>;
-    something_else se;
-
 		cockroach c;
 		insect& i = c;
 		animal& a = c;
