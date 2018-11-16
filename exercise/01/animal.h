@@ -2,7 +2,7 @@
 #include <string>
 #include <memory>
 
-enum anuanimal_enum
+enum class anuanimal_enum
 {
   cockroach_id = 1,
   sparrow_id = 2,
@@ -53,20 +53,20 @@ public:
 class tarantula : public spider
 {
 public:
-  static const anuanimal_enum id = tarantula_id;
+  static const anuanimal_enum id = anuanimal_enum::tarantula_id;
   tarantula();
 };
 
 class cockroach : public insect
 {
 public:
-  static const anuanimal_enum id = cockroach_id;
+  static const anuanimal_enum id = anuanimal_enum::cockroach_id;
   cockroach();
 };
 
 class sparrow : public bird
 {
 public:
-  static const int anuanimal_enum = sparrow_id;
+  static const anuanimal_enum id = anuanimal_enum::sparrow_id;
   sparrow();
 };

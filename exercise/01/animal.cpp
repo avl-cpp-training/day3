@@ -4,9 +4,9 @@ std::unique_ptr<animal> animal_factory(const anuanimal_enum id)
 {
   switch (id)
   {
-  case cockroach_id: return std::make_unique<cockroach>();
-  case sparrow_id: return std::make_unique<sparrow>();
-  case tarantula_id: return std::make_unique<tarantula>();
+  case anuanimal_enum::cockroach_id: return std::make_unique<cockroach>();
+  case anuanimal_enum::sparrow_id: return std::make_unique<sparrow>();
+  case anuanimal_enum::tarantula_id: return std::make_unique<tarantula>();
   }
   return {};
 }
