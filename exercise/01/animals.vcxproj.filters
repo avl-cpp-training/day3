@@ -20,5 +20,8 @@
     <ClInclude Include="animal.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="animal_lib.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
