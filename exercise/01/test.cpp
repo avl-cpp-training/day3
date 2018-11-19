@@ -39,7 +39,7 @@ public:
 		Assert::AreEqual(L"sparrow",   lc.add_animal(animal_factory(2)).c_str());
 		Assert::AreEqual(L"tarantula", lc.add_animal(animal_factory(3)).c_str());
 		Assert::AreEqual(16u, lc.legs());
-	}
+  }
 	TEST_METHOD(legg_counter_same_animal)
 	{
 		leg_counter lc;
@@ -47,5 +47,5 @@ public:
 		lc.add_animal(animal_factory(2));
 		Assert::AreEqual(4u, lc.legs());
 	}
-
 };
+
